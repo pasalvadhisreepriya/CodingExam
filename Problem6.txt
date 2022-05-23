@@ -1,0 +1,31 @@
+package Code;
+public class Qns6 {  
+		 static void convertString(StringBuffer str)
+		    {
+		        int ln = str.length();
+		 
+		        for (int i = 0; i < ln; i++) {
+		            Character c = str.charAt(i);
+		            if (Character.isLowerCase(c))
+		                str.replace(i, i + 1,
+		                            Character.toUpperCase(c) + "");
+		            else
+		                str.replace(i, i + 1,
+		                            Character.toLowerCase(c) + "");
+		        }
+		    }
+		 
+		    public static void main(String[] args)
+		    {
+		        StringBuffer str1= new StringBuffer("Hello world!");
+		        StringBuffer str2= new StringBuffer("JavaScript language 1.8");
+		        StringBuffer str3= new StringBuffer("A letter");
+		        convertString(str1);
+		        System.out.println(str1);
+		        convertString(str2);
+		        System.out.println(str2);
+		        convertString(str3);
+		        System.out.println(str3);
+		    }
+		
+    }  
